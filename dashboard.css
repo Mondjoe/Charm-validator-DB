@@ -1,0 +1,116 @@
+/* -----------------------------------------------------------
+   Charm Capsule — Validator Dashboard CSS
+   Clean, modular, dark/light adaptive
+----------------------------------------------------------- */
+
+/* Root theme variables */
+:root {
+  color-scheme: dark light;
+  --bg: #050816;
+  --fg: #e5e7eb;
+  --card-bg: #0a0f1a;
+  --border: #1e293b;
+  --pill-bg: #1f2937;
+  --accent: #38bdf8;
+}
+
+[data-theme="light"] {
+  --bg: #f9fafb;
+  --fg: #020617;
+  --card-bg: #ffffff;
+  --border: #cbd5e1;
+  --pill-bg: #e2e8f0;
+  --accent: #0284c7;
+}
+
+/* Base layout */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  margin: 0;
+  padding: 2rem;
+  line-height: 1.6;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148,163,184,0.6);
+  background: rgba(15,23,42,0.8);
+  color: #e5e7eb;
+  cursor: pointer;
+  font-size: 12px;
+  backdrop-filter: blur(6px);
+}
+
+/* Pills (status badges) */
+.pill {
+  padding: 4px 10px;
+  background: var(--pill-bg);
+  border-radius: 6px;
+  margin-right: 6px;
+  font-size: 13px;
+}
+
+/* Code blocks */
+pre.mono {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background: #111827;
+  color: #f1f5f9;
+}
+
+[data-theme="light"] th {
+  background: #e2e8f0;
+  color: #020617;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Section headers */
+h1, h2 {
+  color: var(--accent);
+}
+
+/* Cards (optional for future sections) */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
