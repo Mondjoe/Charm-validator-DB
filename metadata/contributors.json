@@ -1,0 +1,70 @@
+{
+  "contributors": [
+    {
+      "id": "charm",
+      "name": "Charm",
+      "roles": ["Maintainer", "Auditor", "Voter"],
+      "wallets": {
+        "ethereum": "0x0000000000000000000000000000000000000000",
+        "solana": "So11111111111111111111111111111111111111112",
+        "tron": "TXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "ton": "EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "bitcoin": "bc1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      },
+      "proofs": {
+        "badge_mints": [],
+        "governance_votes": [],
+        "vault_actions": []
+      }
+    },
+
+    {
+      "id": "contributor_1",
+      "name": "Unnamed Contributor",
+      "roles": ["Auditor"],
+      "wallets": {
+        "ethereum": "",
+        "solana": "",
+        "tron": "",
+        "ton": "",
+        "bitcoin": ""
+      },
+      "proofs": {
+        "badge_mints": [],
+        "governance_votes": [],
+        "vault_actions": []
+      }
+    }
+  ],
+
+  "roles": {
+    "Maintainer": {
+      "description": "Reviews PRs, validates snapshot structure, manages capsule integrity.",
+      "badge": "maintainer"
+    },
+    "Auditor": {
+      "description": "Verifies proofs, anchors, and explorer references.",
+      "badge": "auditor"
+    },
+    "Voter": {
+      "description": "Participates in governance and DAO sync.",
+      "badge": "voter"
+    },
+    "Trader": {
+      "description": "Tracks MUSDT, TRX, and multi-chain vault flows.",
+      "badge": "trader"
+    }
+  },
+
+  "badge_assets": {
+    "base_path": "/public/badge-assets/",
+    "files": {
+      "maintainer": "maintainer.png",
+      "auditor": "auditor.png",
+      "voter": "voter.png",
+      "trader": "trader.png"
+    }
+  },
+
+  "last_updated": "2026-06-05T00:00:00Z"
+}
