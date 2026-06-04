@@ -4,6 +4,7 @@ import WalletLogin from "./components/WalletLogin";
 import BadgeDisplay from "./components/BadgeDisplay";
 import VaultTracker from "./components/VaultTracker";
 import SnapshotExport from "./components/SnapshotExport";
+import SnapshotViewer from "./components/SnapshotViewer";
 
 import validatorMeta from "../metadata/validator.json";
 import contributorsMeta from "../metadata/contributors.json";
