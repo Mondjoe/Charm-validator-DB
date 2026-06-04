@@ -1,26 +1,36 @@
 /* -----------------------------------------------------------
-   Charm Capsule — Validator Dashboard CSS
+   Charm Capsule — Dashboard Theme
    Clean, modular, dark/light adaptive
 ----------------------------------------------------------- */
 
 /* Root theme variables */
 :root {
   color-scheme: dark light;
+
   --bg: #050816;
   --fg: #e5e7eb;
+
   --card-bg: #0a0f1a;
   --border: #1e293b;
   --pill-bg: #1f2937;
+
   --accent: #38bdf8;
+  --accent-soft: rgba(56, 189, 248, 0.15);
+
+  --radius: 10px;
+  --transition: 0.2s ease;
 }
 
 [data-theme="light"] {
   --bg: #f9fafb;
   --fg: #020617;
+
   --card-bg: #ffffff;
   --border: #cbd5e1;
   --pill-bg: #e2e8f0;
+
   --accent: #0284c7;
+  --accent-soft: rgba(2, 132, 199, 0.15);
 }
 
 /* Base layout */
@@ -29,88 +39,165 @@ body {
   background: var(--bg);
   color: var(--fg);
   margin: 0;
-  padding: 2rem;
+  padding: 0;
   line-height: 1.6;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background var(--transition), color var(--transition);
 }
 
-/* Theme toggle button */
-.theme-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 999px;
-  border: 1px solid rgba(148,163,184,0.6);
-  background: rgba(15,23,42,0.8);
-  color: #e5e7eb;
-  cursor: pointer;
-  font-size: 12px;
-  backdrop-filter: blur(6px);
+/* App container */
+.app-root {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: auto;
 }
 
-/* Pills (status badges) */
-.pill {
-  padding: 4px 10px;
+/* Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: var(--accent);
+}
+
+.sovereignty-pill {
   background: var(--pill-bg);
-  border-radius: 6px;
-  margin-right: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  border: 1px solid var(--border);
+}
+
+.last-updated {
+  display: block;
+  margin-top: 6px;
+  opacity: 0.7;
+}
+
+/* Main layout */
+.app-main {
+  display: flex;
+  gap: 2rem;
+}
+
+.app-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  transition: background var(--transition), border var(--transition);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+/* Buttons */
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 14px;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+button:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Badge Display */
+.badge-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--pill-bg);
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.badge-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* Wallet Login */
+.wallet-login button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Vault Tracker */
+.vault-balances p {
+  margin: 6px 0;
+}
+
+/* Snapshot Export */
+.snapshot-preview {
+  margin-top: 1rem;
+}
+
+.snapshot-json {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: var(--radius);
+  overflow-x: auto;
   font-size: 13px;
 }
 
-/* Code blocks */
-pre.mono {
-  background: var(--card-bg);
-  padding: 1rem;
-  border-radius: 8px;
-  overflow-x: auto;
-  border: 1px solid var(--border);
-}
-
-/* Tables */
-table {
+/* Viewer iframe */
+.snapshot-frame {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-  font-size: 14px;
-}
-
-th, td {
+  height: 80vh;
   border: 1px solid var(--border);
-  padding: 8px;
-  text-align: left;
+  border-radius: var(--radius);
 }
 
-th {
-  background: #111827;
-  color: #f1f5f9;
+/* Footer */
+.app-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.7;
 }
 
-[data-theme="light"] th {
-  background: #e2e8f0;
-  color: #020617;
-}
-
-/* Links */
-a {
+.app-footer a {
   color: var(--accent);
   text-decoration: none;
 }
 
-a:hover {
+.app-footer a:hover {
   text-decoration: underline;
-}
-
-/* Section headers */
-h1, h2 {
-  color: var(--accent);
-}
-
-/* Cards (optional for future sections) */
-.card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
 }
