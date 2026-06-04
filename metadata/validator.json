@@ -1,0 +1,48 @@
+{
+  "validator_id": "charm-validator",
+  "name": "Charm Sovereign Validator",
+  "description": "Cross‑chain validator identity anchored across Ethereum, Solana, TRON, TON, and Bitcoin. Provides transparent proofs, badge roles, vault tracking, and governance sync for the Charm Capsule.",
+  
+  "networks": {
+    "ethereum": {
+      "address": "0x0000000000000000000000000000000000000000",
+      "explorer": "https://etherscan.io/address/"
+    },
+    "solana": {
+      "address": "So11111111111111111111111111111111111111112",
+      "explorer": "https://solscan.io/account/"
+    },
+    "tron": {
+      "address": "TXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "explorer": "https://tronscan.org/#/address/"
+    },
+    "ton": {
+      "address": "EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "explorer": "https://tonscan.org/address/"
+    },
+    "bitcoin": {
+      "address": "bc1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "explorer": "https://mempool.space/address/"
+    }
+  },
+
+  "ipfs": {
+    "cid": "QmXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "gateway": "https://ipfs.io/ipfs/"
+  },
+
+  "sovereignty": {
+    "visibility": "visible",
+    "receivability": "receivable",
+    "authority": "sovereign",
+    "status": "immortalized"
+  },
+
+  "links": {
+    "dashboard": "https://your-domain.com",
+    "viewer": "https://your-domain.com/validator-viewer",
+    "badges": "https://your-domain.com/badges"
+  },
+
+  "last_updated": "2026-06-05T00:00:00Z"
+}
