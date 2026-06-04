@@ -1,0 +1,102 @@
+/* -----------------------------------------------------------
+   Charm Capsule — Snapshot Viewer Theme
+   Clean, minimal, dark-mode first
+----------------------------------------------------------- */
+
+:root {
+  color-scheme: dark light;
+
+  --bg: #050816;
+  --fg: #e5e7eb;
+
+  --card-bg: #0a0f1a;
+  --border: #1e293b;
+  --accent: #38bdf8;
+  --accent-soft: rgba(56, 189, 248, 0.15);
+
+  --radius: 10px;
+  --transition: 0.2s ease;
+}
+
+[data-theme="light"] {
+  --bg: #f9fafb;
+  --fg: #020617;
+
+  --card-bg: #ffffff;
+  --border: #cbd5e1;
+  --accent: #0284c7;
+  --accent-soft: rgba(2, 132, 199, 0.15);
+}
+
+/* Base */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+/* Viewer container */
+
+.snapshot-viewer {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.snapshot-viewer h1 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+/* Error box */
+
+.error-box {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid #b91c1c;
+  background: rgba(185, 28, 28, 0.1);
+  color: #fecaca;
+  font-size: 14px;
+}
+
+/* Iframe view */
+
+.snapshot-frame {
+  width: 100%;
+  height: 80vh;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-top: 1rem;
+}
+
+/* JSON view */
+
+.snapshot-json {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: #020617;
+  font-size: 13px;
+  overflow-x: auto;
+}
+
+/* Links */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
