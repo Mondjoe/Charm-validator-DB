@@ -1,17 +1,30 @@
 {
   "name": "charm-validator-db",
-  "version": "1.0.2",
-  "description": "Modular validator dashboard for Charm.eth-wallet login, NFT badge viewer, funding QR, contributor index, and audit trail.",
+  "version": "1.0.0",
+  "description": "Modular validator dashboard for Charm — wallet login, badge display, MUSDT vault tracking, DAO sync, audit trail, and contributor badge minting.",
+  "author": "Charm",
+  "license": "MIT",
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+
   "dependencies": {
+    "@solana/web3.js": "^1.95.0",
+    "@tronweb3/tronwallet-adapter-react-hooks": "^1.0.0",
+    "@tonconnect/sdk": "^2.0.0",
+    "@walletconnect/web3-provider": "^1.8.0",
+    "ethers": "^6.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1"
   },
-  "license": "MIT"
+
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2"
+  }
 }
