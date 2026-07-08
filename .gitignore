@@ -1,9 +1,13 @@
-# Node modules
+# Dependencies
 node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
 # Build output
 build/
 dist/
+out/
 
 # Logs
 npm-debug.log*
@@ -11,39 +15,58 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Local environment files
+# Environment variables (SENSITIVE - never commit)
 .env
 .env.local
 .env.*.local
+.env.production
 
 # System files
 .DS_Store
+.windows/
 Thumbs.db
 
-# IDE / Editor folders
+# IDE / Editor
 .vscode/
 .idea/
-
-# Temporary files
-*.tmp
 *.swp
+*.swo
+*.iml
 
-# Coverage reports
-coverage/
-
-# Cache
+# Runtime cache
 .cache/
 .parcel-cache/
 .next/
-out/
-
-# React scripts cache
 .eslintcache
 
-# Lock files (optional)
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
+# Test coverage
+coverage/
 
-# IPFS pinning artifacts (if generated locally)
+# Temporary files
+*.tmp
+tmp/
+temp/
+
+# CSV/Transaction files (sensitive data)
+*.csv
+export-*.csv
+uploads/
+
+# Database files
+*.db
+*.sqlite
+.env.database
+
+# Blockchain private keys (CRITICAL)
+private_keys/
+wallets/
+secrets/
+*.pem
+*.key
+
+# IPFS artifacts
 .ipfs/
+
+# OS specific
+.AppleDouble
+.LSOverride
